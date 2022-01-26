@@ -1,0 +1,12 @@
+<div *ngIf="model" class="taskDetail">
+<h5>Task Name: {{model.taskName}}</h5>
+<p>Assigned To: {{model.tmName}}</p>
+<p>Description: {{model.description}}</p>
+<p>Due Date: {{model.dueDate | date}}</p>
+<div *ngIf="model.isCompleted">
+<p>Completed: Yes</p>
+</div>
+<div *ngIf="!model.isCompleted">
+    <p>Completed: No</p>
+</div>
+</div>

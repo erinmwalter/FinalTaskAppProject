@@ -1,0 +1,15 @@
+.lineFlex{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: stretch;
+    gap: 2px 2px;
+}
+
+.submitBtn{
+    width:100px;
+}
+
+h4{
+    margin-left:18px;
+}

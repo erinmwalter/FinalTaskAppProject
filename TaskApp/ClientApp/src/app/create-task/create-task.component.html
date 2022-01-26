@@ -1,0 +1,38 @@
+<h4>Create Task</h4>
+<div class="formFlex"> 
+        <div class="lineFlex">
+            <div>
+                <p>Team Member Name</p>
+            </div>
+            <div>
+                <input type="text" class="form-control" id="name" [(ngModel)]="model.tmName" name="tmName">
+            </div>
+        </div>
+        <div class="lineFlex">
+            <div>
+                <p>Task</p>
+            </div>
+            <div>
+                <input type="text" class="form-control" id="name" [(ngModel)]="model.taskName" name="taskName">
+            </div>
+        </div>
+        <div class="lineFlex">
+            <div>
+                <p>Description</p>
+            </div>
+            <div>
+                <input type="text" class="form-control" id="name" [(ngModel)]="model.description" name="description">
+            </div>
+        </div>
+        <div class="lineFlex">
+            <div>
+                <p>Date</p>
+            </div>
+            <div>
+                <input type="date" class="form-control" id="name" [(ngModel)]="model.dueDate" name="date">
+            </div>
+        </div>
+        <div class="lineFlex">
+            <button class="submitBtn" (click)="onSubmit()">Submit</button>
+        </div>
+</div>

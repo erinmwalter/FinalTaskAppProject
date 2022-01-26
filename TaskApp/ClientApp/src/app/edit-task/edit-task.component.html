@@ -1,0 +1,28 @@
+<div *ngIf="model" class="editTask">
+    <div class="formFlex">
+        <div>
+            <p>TM Name</p>
+            <input type="text" class="form-control" id="name" [(ngModel)]="model.tmName" name="tmName">
+        </div>
+        <div>
+            <p>Task</p>
+            <input type="text" class="form-control" id="name" [(ngModel)]="model.taskName" name="taskName">
+        </div>
+        <div>
+            <p>Description</p>
+            <input type="text" class="form-control" id="name" [(ngModel)]="model.description" name="description">
+        </div>
+        <div>
+            <p>Due Date</p>
+            <input type="date" class="form-control" id="name" value="{{model.dueDate}}" [(ngModel)]="model.dueDate" name="date">
+        </div>
+        <div>
+            <p>Mark Complete</p>
+            <input type="checkbox" [(ngModel)]="model.isCompleted" name="isCompleted"/>
+            <label for="isCompleted">Complete</label>
+        </div>
+        <div>
+            <button (click)="onSubmit()">Update</button>
+        </div>
+    </div>
+    </div>

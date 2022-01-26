@@ -1,0 +1,30 @@
+<div class="row">
+<div class="taskListBox col">
+    <h4>Office Task List</h4>
+    <div class="taskMenu">
+        <p class="filterLabel">Filter by: </p>
+        <input class="filterInput" type="text" [(ngModel)]="listFilter"/>
+        <button (click)="ExpandDisplays()">Expand</button>
+        <button (click)="CloseDisplays()">Collapse</button>
+    </div>
+    <div class="taskBox">
+        <div *ngFor="let task of filteredtaskList">
+        <div  class="indTask" [ngClass]="{'conditional-class':task.isCompleted}">    
+            <div><label class="taskTitle">{{task.taskName | uppercase}}</label></div>
+            <div><button (click)="DisplayDetails(task.taskId)">Details</button>
+                <button (click)="DisplayEdit(task.taskId)">Edit</button>
+                <button (click)="DeleteEntry(task.taskId)">Delete</button>
+            </div>
+        </div>
+        <div >
+            <app-task-detail id="taskDetail{{task.taskId}}" style="display:none" [taskId]="task.taskId"></app-task-detail>
+            <app-edit-task id="taskEdit{{task.taskId}}" style="display:none" [taskId]="task.taskId"></app-edit-task>
+        </div>
+    </div>
+    </div>
+</div>
+<div class="taskListBox col createTask"> 
+    <app-create-task></app-create-task>
+</div>
+</div>
+
